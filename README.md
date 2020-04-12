@@ -1,4 +1,4 @@
-# コロナ採用サイト
+# コロナで失業した人むけ採用サイト
 
 ## Features / Use Cases
 This Gulp Starter Kit provides a simple way of setting up a modern web development environment.
