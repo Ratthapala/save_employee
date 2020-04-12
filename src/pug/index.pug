@@ -1,0 +1,512 @@
+extends templates/_default
+block vars
+  -
+    var title = 'topのtitle';
+    var page = { classes: 'top' };
+    var desc = 'topのdesc'
+
+block header
+  header.header
+    .p-head
+      h1.p-head-title yoga school kailas
+      .trigger
+        span.line.line--01
+        span.line.line--02
+        span.line.line--03
+    nav.p-nav
+      ul.p-nav-list
+        li.p-nav-item.p-nav-item--has-lower
+          .item-trigger
+            span.en about
+            span.ja カイラスについて
+          ul.p-nav-list__lower
+            li.nav-item
+              a(href="/about/")
+                span.en about
+                span.ja TOP
+            li.nav-item
+              a(href="/about/class/")
+                span.en School Info
+                span.ja 教室案内
+
+        li.p-nav-item.p-nav-item--has-lower
+          .item-trigger
+            span.en styles
+            span.ja 指導するヨーガのスタイル
+          ul.p-nav-list__lower
+            li.nav-item
+              a(href="/styles/hatha/")
+                span.en styles
+                span.ja TOP
+            li.nav-item
+              a(href="/styles/hatha/")
+                span.en hatha yoga
+                span.ja ハタ・ヨーガ
+            li.nav-item
+              a(href="/styles/kundalini/")
+                span.en kundalini yoga
+                span.ja クンダリニー・ヨーガ
+            li.nav-item
+              a(href="/styles/bhakti/")
+                span.en bhakti yoga
+                span.ja バクティ・ヨーガ
+            li.nav-item
+              a(href="/styles/meditation/")
+                span.en meditation
+                span.ja 瞑想
+
+
+        li.p-nav-item
+          a(href='/instructors')
+            span.en instructors
+            span.ja インストラクター
+
+        li.p-nav-item
+          a(href='/entertainment')
+            span.en entertainment
+            span.ja 映像・歌・朗読
+
+        li.p-nav-item
+          a(href='/shop')
+            span.en shop
+            span.ja ショップ
+
+        li.p-nav-item.p-nav-item--cta
+          a(href='/trial')
+            span.en trial
+            span.ja 無料体験
+
+
+block content
+  #js-scrollpage.p-content
+    .p-mv.fp-item
+      .p-mv__body
+        span.image
+        .p-mv__bg.bg
+          #js-bg-player.bg-body
+            video(data-str='/assets/video/video01.mp4' autoplay muted data-keepplaying class='js-bg-video bg-video')
+        .p-mv__desc
+          .p-mv__play-btn.js-playmovie
+            span.icon-play3
+
+      .p-mv__modal.modal.js-modal
+        .modal-body
+          .modal-content
+            #opening-movie
+              video(class='modal-video' data-str='/assets/video/video01.mp4' muted loop)
+        .modal-overlay.js-modal-overlay
+
+    section.p-style.fp-item.p-section.fp-auto-height-responsive
+      h2.m-hdg
+        span.en yoga style
+        span.ja カイラスで学ぶ本格的ヨーガ
+
+      ul.p-style__list
+        li.p-style__item.p-style__item--01
+          a(href='/style/hatha-yoga')
+            .image
+            .texts
+              span.en hatha yoga
+              spna.ja ハタヨーガ
+
+        li.p-style__item.p-style__item--02
+          a(href='/style/kundalini-yoga')
+            .image
+            .texts
+              span.en kundalini yoga
+              spna.ja クンダリニーヨーガ
+
+        li.p-style__item.p-style__item--03
+          a(href='/style/bhakti-yoga')
+            .image
+            .texts
+              span.en bhakti yoga
+              spna.ja バクティヨーガ
+
+        li.p-style__item.p-style__item--04
+          a(href='/style/meditation')
+            .image
+            .texts
+              span.en meditation
+              spna.ja 瞑想
+
+    section.p-about.p-section.fp-item.fp-auto-height-responsive
+      h2.m-hdg.m-hdg--01
+        span.en about kailas
+        span.ja ヨーガスクールカイラスについて
+
+      h3.m-sub-hdg ヨーガスクールカイラスが&quot;本格的ヨーガ&quot;と言われる理由がここにある。
+      p.m-btn: a(href='/about') 詳細を見る
+
+    .p-instructors.fp-item.p-section.fp-auto-height-responsive
+      h2.m-hdg.m-hdg--01
+        span.en instructors
+        span.ja 個性溢れるインストラクターの紹介
+
+      p.m-btn: a(href='/about') インストラクター紹介を見る
+
+    .p-class.p-section.fp-item.fp-auto-height-responsive
+      h2.m-hdg.m-hdg--01
+        span.en class
+        span.ja 教室案内
+
+      .p-class__box
+        h3.p-class__hdg レッスンシステム
+        ul.p-class__list
+          li.p-class__item ・完全予約制
+          li.p-class__item ・お好きな時間にレッスンが受けられます。
+          li.p-class__item ・初心者の方から上級者の方まで、皆様のニーズに応えられるよう、マンツーマンまたは少人数制で行っています。
+
+        dl.p-class__definition
+          dt レッスン内容：
+          dd アーサナ、気功、プラーナーヤーマ（呼吸法）、ムドラー（高度な呼吸法）、瞑想
+        dl.p-class__definition
+          dt ​レッスン時間：
+          dd 約１時間
+
+      .p-class__box
+        h3.p-class__hdg 料金体系
+        table.p-class__table
+          tr
+            th 入会金
+            td １００００円（年会費などはございません。）
+          tr
+            th 月謝
+            td １００００円（週二回受講可能です。）
+          tr
+            th 単発（ドロップイン）
+            td １００００円（１か月に４回以上通えない方は一回ごとのお支払がおすすめです。）
+
+      .p-class__txt 無料体験は随時受け付けております。気軽にお問い合わせください。
+      p.m-btn: a(href='/trial') 無料体験レッスンを申し込む
+
+    section.p-entertainment.fp-item.fp-auto-height-responsive
+      h2.m-hdg
+        span.en entertainment
+        span.ja キールタンと聖典朗読と映像
+
+      ul.p-entertainment__list
+        li.p-entertainment__item.p-entertainment__item--01
+          a(href='/entertainment/kirtan')
+            .images
+            .texts
+              span.en kirtan
+              spna.ja キールタン
+
+        li.p-entertainment__item.p-entertainment__item--02
+          a(href='/entertainment/readings')
+            .images
+            .texts
+              span.en readings
+              spna.ja 聖典朗読
+
+        li.p-entertainment__item.p-entertainment__item--03
+          a(href='/entertainment/mahabharata')
+            .images
+            .texts
+              span.en mahabharata
+              spna.ja 実写ドラマ・マハーバーラタ
+
+        li.p-entertainment__item.p-entertainment__item--04
+          a(href='/entertainment/ramayana')
+            .images
+            .texts
+              span.en ramayana
+              spna.ja 実写ドラマ・ラーマーヤナ
+
+    section.p-blog.p-section.fp-item.fp-auto-height-responsive
+      h2.m-hdg.m-hdg--01
+        span.en blog
+        span.ja インストラクターブログ
+
+      ul.p-blog__list
+        li.p-blog__item
+          p.m-btn: a(href='https://blog.goo.ne.jp/yoga-kailas' target='_blank' rel='noopener') 松川先生のブログ
+
+        li.p-blog__item
+          p.m-btn: a(href='http://kailasblog.blog.fc2.com/' target='_blank' rel='noopener') カイラスインストラクターのブログ
+
+    section.p-amrita.p-section.fp-item.fp-auto-height-responsive
+      h2.m-hdg.m-hdg--01
+        span.en amrita channel
+        span.ja アムリタチャンネル
+
+      p.m-txt.m-txt--01
+        | ヨーガスクールカイラスの公式Youtubeチャンネル。
+        br
+        | 勉強会のお話、キールタンのPV、インド神話のアニメなどコンテンツ盛りだくさん。
+
+      p.m-btn: a(href='https://www.youtube.com/channel/UCgC-qcaEMpXL8KsWT3xBJ9A' target="_blank" rel="noopener") アムリタチャンネルを見る
+
+    section.p-gallery.p-section.fp-item.fp-auto-height-responsive
+      h2.m-hdg.m-hdg--01
+        span.en gallery
+        span.ja カイラスの様子や雰囲気
+
+      ul.p-gallery__body
+        li.p-gallery__item
+        li.p-gallery__item
+        li.p-gallery__item
+        li.p-gallery__item
+        li.p-gallery__item
+        li.p-gallery__item
+        li.p-gallery__item
+        li.p-gallery__item
+
+      .p-gallery_wrap
+
+    .p-misc.p-section.p-section--type01.fp-item.fp-auto-height-responsive
+      .p-misc__news
+        h2.m-hdg
+          span.en What’s new
+          span.ja 更新情報
+
+        .news-topics.topics
+          h3.topics__hdg TOPICS
+          h34.topics__hdg--sub 新刊がでました
+          ul.topics__list
+            li.topics__item: a(href='https://www.yoga-kailas.com/product-page/%E6%97%A5%E3%80%85%E4%BF%AE%E7%BF%92%E3%81%99%E3%82%8B%E8%81%96%E8%80%85%E3%81%AE%E6%99%BA%E6%85%A7-1', target='_blank' rel='noopener') 『日々修習する聖者の智慧Ⅳ』
+            li.topics__item: a(href='https://www.yoga-kailas.com/product-page/%E3%83%91%E3%83%88%E3%82%A5%E3%83%AB-%E3%83%AA%E3%83%B3%E3%83%9D%E3%83%81%E3%82%A7%E3%81%AE%E7%94%9F%E6%B6%AF%E3%81%A8%E6%95%99%E3%81%88' target='_blank' rel='noopener') 『パトゥル・リンポチェの生涯と教え』
+
+          ul.news-list
+            li.news-item: a(href='https://blog.goo.ne.jp/yoga-kailas/e/77f7b88f7cc6b66211569626e271babb' target='_blank' rel='noopener')
+              .news-cate Blog
+              .news-time.u-font-noto: time 【2019.11.05】
+              p.txt ヨーガスクール・カイラスブログ「「解説・マルパの生涯」（２）」
+
+            li.news-item: a(href='https://www.yoga-kailas.com/kirtan' target='_blank' rel='noopener')
+              .news-cate.news-cate--kirtan kirtan
+              .news-time.u-font-noto: time 【2019.11.04】
+              p.txt キールタンページにオリジナルの新曲「魂捧ぐ、恐れなき母の御足に」をアップしました
+
+            li.news-item: a(href='https://blog.goo.ne.jp/yoga-kailas/e/04ba7fb2345aca6408d7347ea52abd99' target='_blank' rel='noopener')
+              .news-cate Blog
+              .news-time.u-font-noto: time 【2019.11.02】
+              p.txt ヨーガスクール・カイラスブログ「自我の放棄と慈悲と帰依（再掲・抜粋）」「師」「勇敢」
+
+            li.news-item: a(href='https://blog.goo.ne.jp/yoga-kailas/e/863deedf95ebe6e15283a9c59c7c2de9' target='_blank' rel='noopener')
+              .news-cate Blog
+              .news-time.u-font-noto: time 【2019.11.01】
+              p.txt ヨーガスクール・カイラスブログ「キーワード」
+
+            li.news-item: a(href='/shop')
+              .news-cate.news-cate--info info
+              .news-time.u-font-noto: time 【2019.10.23】
+              p.txt カイラスＳＨＯＰをリニューアル致しました
+
+      .p-misc__location
+        h2.m-hdg
+          span.en Locations
+          span.ja ヨーガスクールカイラスは全国五ヶ所に教室を開いています。
+
+        .swiper-container
+          ul.location-info.swiper-wrapper
+            li.location-item.swiper-slide
+              h3.location-hdg
+                span.en yokohama
+                span.ja 横浜スタジオ
+
+              .m-media
+                .m-media__body
+                  p.m-media__txt ビルの１５階にある見晴らしのよい開放的な教室です。毎週開催される勉強会も、こちらの教室でおこなわれています。
+
+                  ul.m-media__list
+                    li.item 各線横浜駅徒歩１０分
+                    li.item 京急戸部駅徒歩２分
+                    li.item 横浜市営地下鉄高島町駅徒歩３分
+                    li.item 相鉄線平沼橋駅徒歩４分
+
+                  p.m-media__notice.u-font-noto: a(href='tel:0455485506') 045-548-5506
+
+                .m-media__image
+                  img(src="/assets/images/top/location_yokohama01.jpg", alt="横浜スタジオ")
+
+
+            li.location-item.swiper-slide
+              h3.location-hdg
+                span.en SETAGAYA
+                span.ja 東京・世田谷スタジオ
+
+              .m-media
+                .m-media__body
+                  p.m-media__txt 三軒茶屋の閑静な住宅街にあり、瞑想的な雰囲気の教室です。
+
+                  ul.m-media__list
+                    li.item 田園都市線三軒茶屋駅 徒歩１０分
+                    li.item 世田谷線若林駅 徒歩２分
+                    li.item 横浜市営地下鉄高島町駅徒歩３分
+                    li.item 相鉄線平沼橋駅徒歩４分
+
+                  p.m-media__notice.u-font-noto: a(href='tel:0354869555') 03-5486-9555
+
+                .m-media__image
+                  img(src="/assets/images/top/location_setagaya01.jpg", alt="横浜スタジオ")
+
+            li.location-item.swiper-slide
+              h3.location-hdg
+                span.en osaka
+                span.ja 大阪・心斎橋スタジオ
+
+              .m-media
+                .m-media__body
+                  p.m-media__txt アットホームな雰囲気の明るい感じの教室です。
+
+                  ul.m-media__list
+                    li.item 各線心斎橋駅　徒歩８分
+                    li.item 四つ橋線四ツ橋駅　徒歩３分
+                    li.item 長堀鶴見緑地線西大橋駅　徒歩２分
+
+                  p.m-media__notice.u-font-noto: a(href='tel:0671822218') 06-7182-2218
+
+                .m-media__image
+                  img(src="/assets/images/top/location_osaka01.jpg", alt="横浜スタジオ")
+
+
+            li.location-item.swiper-slide
+              h3.location-hdg
+                span.en SENDAI
+                span.ja 仙台スタジオ
+
+              .m-media
+                .m-media__body
+                  p.m-media__txt
+                  | キッズルームがあり子供や赤ちゃんもお母さんと一緒に通っています。白くて綺麗なあかるい教室です。
+                  br
+                  | ※現在女性のみの受付となっております。ご了承ください。
+
+                  ul.m-media__list
+                    li.item 各線仙台駅　徒歩８分
+
+                  p.m-media__notice.u-font-noto: a(href='tel:0227974398') 022-797-4398
+
+                .m-media__image
+                  img(src="/assets/images/top/location_sendai01.jpg", alt="横浜スタジオ")
+
+
+            li.location-item.swiper-slide
+              h3.location-hdg
+                span.en sapporo
+                span.ja 札幌・円山スタジオ
+
+              .m-media
+                .m-media__body
+                  p.m-media__txt
+                  | 円山エリアにて、リニューアルオープンしました。
+                  br
+                  | こじんまりした、アットホームな教室。
+
+                  ul.m-media__list
+                    li.item 東西線円山公園駅　徒歩８分
+
+                  p.m-media__notice.u-font-noto: a(href='tel:0112159393') 011-215-9393
+
+                .m-media__image
+                  img(src="/assets/images/top/location_sapporo01.jpg", alt="横浜スタジオ")
+
+          .swiper-pagination
+
+          .buttons-wrap
+            .swiper-button-next
+            .swiper-button-prev
+
+      .m-cta-btn: a(href='/trial/') 無料体験レッスンを申し込む
+        span.icon-arrow-right2.m-cta-btn__icon
+
+    footer.footer.fp-item.fp-auto-height-responsive
+      .footer__siteinfo
+        dl.footer__info
+          dt.footer__name Yoga School KAILAS
+          dd.footer__detail
+            ul.footer__data
+              li ヨーガスクールカイラス / Yoga School KAILAS
+              li 〒220-0023
+              li 神奈川県横浜市西区平沼１丁目１２−１
+              li mail. info@yoga-kailas.com
+              li tel. 045-548-5506
+              li url. https://www.yoga-kailas.com/
+
+            .footer__wrap
+              ul.footer__data
+                li 横浜教室
+                li 045-548-5506
+
+              ul.footer__data
+                li 世田谷教室
+                li 03-5486-9555
+              ul.footer__data
+                li 大阪教室
+                li 06-7182-2218
+              ul.footer__data
+                li 横浜教室
+                li 045-548-5506
+              ul.footer__data
+                li 仙台教室
+                li 022-797-4398
+              ul.footer__data
+                li 札幌教室
+                li 011-215-9393
+
+            ul.footer__sns
+              li.fb: a(href='https://www.facebook.com/YogaSchoolKailas/' target='_blank' rel='noopener') Facebook
+                span.icon-facebook.footer-fb
+              li.yt: a(href='https://www.youtube.com/c/AmritaChannel' target='_blank' rel='noopener') YouYube
+                span.icon-youtube.footer-yt
+
+            p(class="footer__cta"): a(href='/trial/') 無料体験レッスンを申し込む
+            p(class="footer__copyright"): small Copyright Yoga School KAILAS All rights reserved.
+
+      .footer__body
+        dl.footer__category
+          dt.footer__category__name: a(href='/style') Yoga Style
+          dd.footer__category__content
+            ul.footer__category__list
+              li.footer__category__item: a(href='/style/hatha/') hatha yoga ハタヨーガ
+              li.footer__category__item: a(href='/style/hatha/') kundalini yoga クンダリニーヨーガ
+              li.footer__category__item: a(href='/style/hatha/') bhakti yoga バクティヨーガ
+              li.footer__category__item: a(href='/style/hatha/') meditation 瞑想
+
+        dl.footer__category
+          dt.footer__category__name: a(href='/about') about kailas
+          dd.footer__category__content
+            ul.footer__category__list
+              li.footer__category__item: a(href='/about/') ヨーガスクールカイラスについて
+
+        dl.footer__category
+          dt.footer__category__name: a(href='/instructors/') instructors
+          dd.footer__category__content
+            ul.footer__category__list
+              li.footer__category__item: a(href='/instructors/') インストラクター
+
+        dl.footer__category
+          dt.footer__category__name: a(href='/class/') yoga class
+          dd.footer__category__content
+            ul.footer__category__list
+              li.footer__category__item: a(href='/class/') 教室案内
+
+
+        dl.footer__category
+          dt.footer__category__name: a(href='/entertainment/') entartaiment
+          dd.footer__category__content
+            ul.footer__category__list
+              li.footer__category__item: a(href='/entertainment/') キールタンと聖典朗読と映像
+
+        dl.footer__category
+          dt.footer__category__name: a(href='/blog/') blog
+          dd.footer__category__content
+            ul.footer__category__list
+              li.footer__category__item: a(href='https://blog.goo.ne.jp/yoga-kailas' target='_blank' rel='noopener') 松川先生のブログ
+              li.footer__category__item
+                a(href='http://kailasblog.blog.fc2.com/' target='_blank' rel='noopener') Kailasのインストラクターブログ
+
+
+        dl.footer__category
+          dt.footer__category__name: a(href='https://www.youtube.com/channel/UCgC-qcaEMpXL8KsWT3xBJ9A' target='_blank'
+          rel='noopener') Amrita Channel アムリタチャンネル
+          dd.footer__category__content
+            ul.footer__category__list
+              li.footer__category__item: a(href='https://blog.goo.ne.jp/yoga-kailas' target='_blank' rel='noopener') 松川先生のブログ
+              li.footer__category__item
+                a(href='http://kailasblog.blog.fc2.com/' target='_blank' rel='noopener') Kailasのインストラクターブログ
+
+
+  script(async src="/assets/js/index.js")
