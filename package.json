@@ -41,6 +41,7 @@
     "@babel/preset-env": "^7.6.2",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",
+    "bulma": "^0.8.2",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",

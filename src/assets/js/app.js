@@ -1,6 +1,1 @@
-$(document).ready(function () {
-	console.log('/skdljfalksdfjaklsdfja');
-
-});
-
-
+console.log('/skdljfalksdfjaklsdfja');

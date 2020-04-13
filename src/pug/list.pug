@@ -1,0 +1,54 @@
+extends templates/_default
+block vars
+  -
+    var title = 'topのtitle';
+    var page = { classes: 'top' };
+    var desc = 'topのdesc'
+
+block header
+  header.header
+
+block content
+  main#main.p-main.list
+    .p-head
+      h1.p-head__hdg #コロナ疲れで都会から一時的に地方へ帰って働きたい人向けサイト
+
+    .p-body
+      .p-map
+        iframe(src="https://www.google.com/maps/d/u/0/embed?mid=1Q8xTedo98uifglhpzSjlgr0CFQdmYZIt" width="640" height="480")
+
+      .p-lead
+        p.txt コロナショックを機に、都会で働くことに疲れた方へ。
+          br
+          | 非常事態宣言、地方に比べて増加する都会の感染者の多さ、買い占め、感染リスク・・・
+          br
+          | テレワーク導入企業の増加で、場所にこだわらずに働くことができる時代になりました。
+          br
+          | このコロナショックを機に、ご自身のキャリア・働き方を見直してみてはいかかでしょうか？
+
+      .p-list
+        h2.m-hdg 都道府県ごとに求人を見る
+        ul.p-list__body
+          li.p-list__item: a(href='./pref/fukushima.html') 福島県
+          li.p-list__item: a(href='./pref/fukushima.html') 福島県
+          li.p-list__item: a(href='./pref/fukushima.html') 福島県
+          li.p-list__item: a(href='./pref/fukushima.html') 福島県
+          li.p-list__item: a(href='./pref/fukushima.html') 福島県
+          li.p-list__item: a(href='./pref/fukushima.html') 福島県
+
+      .p-register
+        h2.m-hdg サイトに掲載したい企業の方へ
+        p.txt 以下のフォームより御社の情報をお送りください。
+        | 当サイトに反映いたします。
+        .register__form
+          iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSe_PPhGX65FhpXtaaRpwOi0rRAWnyI5imoz0Pk1K9pOpnBuPw/viewform?embedded=true" width="640" height="1561" frameborder="0" marginheight="0" marginwidth="0")
+
+      .p-media
+        h2.m-hdg サイトに掲載したい企業の方へ
+        p.txt 以下のフォームより御社の情報をお送りください。
+        | 当サイトに反映いたします。
+        .register__form
+          iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSe_PPhGX65FhpXtaaRpwOi0rRAWnyI5imoz0Pk1K9pOpnBuPw/viewform?embedded=true" width="640" height="1561" frameborder="0" marginheight="0" marginwidth="0")
+
+
+  script(async src="/assets/js/index.js")
