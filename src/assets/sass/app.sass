@@ -6,22 +6,30 @@ body
 .m-hdg
 	@include font-size(20)
 	font-weight: 700
-	color: #098bde
+	color: #333
+	background: #eee
 	position: relative
 	text-align: center
 	padding-bottom: 10px
 	margin-bottom: 20px
+	padding: 20px
 
-	&::before
-		content: ''
-		display: block
-		position: absolute
-		left: 50%
-		bottom: 0
+.m-form
+	margin-top: 30px
+	height: 300px
+	overflow: hidden
+
+.m-form iframe
+	width: 100%
+
+@media screen and (min-width:768px)
+	.m-form iframe
 		width: 50%
-		height: 3px
-		background: #098bde
-		transform: translateX(-50%)
+
+.m-title
+	@include font-size(20)
+	font-weight: 700
+	margin-bottom: 30px
 
 .p-head
 	padding: 10px 20px
@@ -35,21 +43,51 @@ body
 	.p-head__hdg
 		@include font-size(24)
 
+@media screen and (min-width:768px)
+.index.p-main
+	.p-head__hdg
+		text-align: center
+
 .p-choice
-	height: 100%
+	margin-top: 50px
+
+.p-choice__item
 	width: 100%
-	display: flex
-	justify-content: center
-	align-items: center
-	flex-direction: column
+	text-align: center
+	margin-top: 20px
+
+	&:first-child
+		margin-top: 0
+
+	a
+		@include font-size(24)
+		padding: 20px
+		color: #fff
+		display: block
+		border-radius: 10px
+
+.p-choice__item--main a
+	background: #EF3C61
+
+.p-choice__item--other a
+	background: #058BDE
+
+@media screen and (min-width:768px)
+	.p-choice
+		margin-top: 50px
+		display: flex
+		justify-content: space-between
+		flex-direction: row
+		position: absolute
+		left: 50%
+		top: 50%
+		width: 80%
+		transform: translate(-50%, -50%)
 
 	.p-choice__item
-		width: 100%
+		width: 45%
 		text-align: center
-		margin-top: 20px
-
-		&:first-child
-			margin-top: 0
+		margin-top: 0
 
 		a
 			@include font-size(24)
@@ -64,10 +102,10 @@ body
 	.p-choice__item--other a
 		background: #058BDE
 
-
 // list
-.list .p-body
-	padding: 0 20px
+.page-list .p-body
+	padding: 0 20px 60px
+
 	.p-map iframe
 		width: 100%
 
@@ -93,10 +131,30 @@ body
 	.p-register
 		margin-top: 50px
 
-	.p-register .register__form
-		margin-top: 30px
-		height: 300px
-		overflow: hidden
+	.p-media
+		margin-top: 50px
 
-	.p-register .register__form iframe
+// footer
+.p-footer
+	padding: 20px 20px
+	background: #eee
+	text-align: center
+
+	p
+		margin-bottom: 0
+
+
+@media screen and (min-width:768px)
+	.page-list .p-body
+		max-width: 1200px
 		width: 100%
+		margin-left: auto
+		margin-right: auto
+
+	.page-list .p-body .p-list
+		margin-top: 60px
+
+
+
+// page-detail
+.page-detail

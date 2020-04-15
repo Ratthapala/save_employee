@@ -9,7 +9,7 @@ block header
   header.header
 
 block content
-  main#main.p-main.list
+  main#main.p-main.page-list
     .p-head
       h1.p-head__hdg #コロナ疲れで都会から一時的に地方へ帰って働きたい人向けサイト
 
@@ -30,25 +30,24 @@ block content
         h2.m-hdg 都道府県ごとに求人を見る
         ul.p-list__body
           li.p-list__item: a(href='./pref/fukushima.html') 福島県
-          li.p-list__item: a(href='./pref/fukushima.html') 福島県
-          li.p-list__item: a(href='./pref/fukushima.html') 福島県
-          li.p-list__item: a(href='./pref/fukushima.html') 福島県
-          li.p-list__item: a(href='./pref/fukushima.html') 福島県
-          li.p-list__item: a(href='./pref/fukushima.html') 福島県
 
       .p-register
         h2.m-hdg サイトに掲載したい企業の方へ
         p.txt 以下のフォームより御社の情報をお送りください。
-        | 当サイトに反映いたします。
-        .register__form
+          br
+          | 当サイトに反映いたします。
+        .register__form.m-form
           iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSe_PPhGX65FhpXtaaRpwOi0rRAWnyI5imoz0Pk1K9pOpnBuPw/viewform?embedded=true" width="640" height="1561" frameborder="0" marginheight="0" marginwidth="0")
 
       .p-media
-        h2.m-hdg サイトに掲載したい企業の方へ
+        h2.m-hdg メディアに掲載したい企業の方へ
         p.txt 以下のフォームより御社の情報をお送りください。
-        | 当サイトに反映いたします。
-        .register__form
-          iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSe_PPhGX65FhpXtaaRpwOi0rRAWnyI5imoz0Pk1K9pOpnBuPw/viewform?embedded=true" width="640" height="1561" frameborder="0" marginheight="0" marginwidth="0")
+          br
+          | 当サイトに反映いたします。
+        .register__form.m-form
+          iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSfekbwo3EDRO7sQmofLxkDaC1tV_ADbU_jyfAe_5dw4jFUYOg/viewform?embedded=true" width="640" height="1392" frameborder="0" marginheight="0" marginwidth="0")
 
+  footer#footer.p-footer
+    p.copy &copy;コロナ疲れで都会から一時的に地方へ帰って働きたい人向けサイト
 
   script(async src="/assets/js/index.js")
