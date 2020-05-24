@@ -5,6 +5,9 @@ block vars
     var page = { classes: 'top' };
     var desc = 'topのdesc'
 
+append css
+  link(rel="stylesheet" href="/assets/css/pages/index.css")
+
 block header
   header.header
 
@@ -12,10 +15,17 @@ block content
   main#main.p-main.index
     .p-head
       h1.p-head__hdg #コロナ疲れで都会から一時的に地方へ帰って働きたい人向けサイト
-    ul.p-choice.buttons.are-large
-      li.p-choice__item.p-choice__item--main: a(href='list.html') 地方での就職を希望
-      li.p-choice__item.p-choice__item--other: a(href='http://www.jac-recruitment.jp/' target='_blank' rel='noopener') 都市での就職を希望
 
+    .p-body
+      ul.p-choice.buttons.are-large
+        li.p-choice__item.p-choice__item--main: a(href='list.html') 地方での就職を希望
+        li.p-choice__item.p-choice__item--other: a(href='http://www.jac-recruitment.jp/' target='_blank' rel='noopener') 都市での就職を希望
+
+      .u-separator
+
+      ul.p-company.buttons.are-large
+        li.p-company__item.p-company__item--company: a(href='https://docs.google' +
+        '.com/forms/d/1hUjc5HD8bY_bvauOZUmYsXT3xflABZGeTWulDMXCJVQ/prefill' target='_blank') 企業の方はこちら
 
 
   script(async src="/assets/js/index.js")

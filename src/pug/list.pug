@@ -5,11 +5,14 @@ block vars
     var page = { classes: 'top' };
     var desc = 'topのdesc'
 
+append css
+  link(rel="stylesheet" href="/assets/css/pages/list.css")
+
 block header
   header.header
 
 block content
-  main#main.p-main.page-list
+  main#main.p-main.page-list.l-wrap
     .p-head
       h1.p-head__hdg #コロナ疲れで都会から一時的に地方へ帰って働きたい人向けサイト
 

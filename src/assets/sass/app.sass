@@ -1,138 +1,22 @@
 @import '_includes'
 
+// body
 body
 	background: #ECF3FA
 
-.m-hdg
-	@include font-size(20)
-	font-weight: 700
-	color: #333
-	background: #eee
-	position: relative
-	text-align: center
-	padding-bottom: 10px
-	margin-bottom: 20px
-	padding: 20px
-
-.m-form
-	margin-top: 30px
-	height: 300px
-	overflow: hidden
-
-.m-form iframe
-	width: 100%
+/*
+ * p-head
+ */
 
 @media screen and (min-width:768px)
-	.m-form iframe
-		width: 50%
-
-.m-title
-	@include font-size(20)
-	font-weight: 700
-	margin-bottom: 30px
-
-.p-head
-	padding: 10px 20px
-
-.index.p-main
-	width: 100%
-	height: 100vh
-	padding: 20px
-
-.index.p-main
-	.p-head__hdg
-		@include font-size(24)
-
-@media screen and (min-width:768px)
-.index.p-main
-	.p-head__hdg
-		text-align: center
-
-.p-choice
-	margin-top: 50px
-
-.p-choice__item
-	width: 100%
-	text-align: center
-	margin-top: 20px
-
-	&:first-child
-		margin-top: 0
-
-	a
-		@include font-size(24)
-		padding: 20px
-		color: #fff
-		display: block
-		border-radius: 10px
-
-.p-choice__item--main a
-	background: #EF3C61
-
-.p-choice__item--other a
-	background: #058BDE
-
-@media screen and (min-width:768px)
-	.p-choice
-		margin-top: 50px
-		display: flex
-		justify-content: space-between
-		flex-direction: row
-		position: absolute
-		left: 50%
-		top: 50%
-		width: 80%
-		transform: translate(-50%, -50%)
-
-	.p-choice__item
-		width: 45%
-		text-align: center
-		margin-top: 0
-
-		a
-			@include font-size(24)
-			padding: 20px
-			color: #fff
-			display: block
-			border-radius: 10px
-
-	.p-choice__item--main a
-		background: #EF3C61
-
-	.p-choice__item--other a
-		background: #058BDE
-
-// list
-.page-list .p-body
-	padding: 0 20px 60px
-
-	.p-map iframe
+	.p-head
+		max-width: 1024px
 		width: 100%
+		margin-left: auto
+		margin-right: auto
+		padding: 20px 0
 
-	.p-lead
-		margin-top: 20px
 
-	.p-list
-		margin-top: 30px
-
-	.p-list .p-list__body
-		margin-top: 20px
-		display: flex
-		flex-wrap: wrap
-
-	.p-list .p-list__item
-		padding-left: 20px
-		width: 50%
-		margin-top: 10px
-
-		a
-			color: #50a5da
-
-	.p-register
-		margin-top: 50px
-
-	.p-media
-		margin-top: 50px
 
 // footer
 .p-footer
@@ -142,62 +26,3 @@ body
 
 	p
 		margin-bottom: 0
-
-
-@media screen and (min-width:768px)
-	.page-list .p-body
-		max-width: 1200px
-		width: 100%
-		margin-left: auto
-		margin-right: auto
-
-	.page-list .p-body .p-list
-		margin-top: 60px
-
-
-
-// page-detail
-.page-detail
-
-
-// p-recruit-table
-.page-detail .p-recruit-table
-	margin-top: 30px
-
-	.hdg
-		@include font-size(20)
-
-.page-detail .details
-	margin-top: 20px
-
-	.detail-item
-		background: #fff
-		padding: 20px
-
-	.item-hdg
-		@include font-size(18)
-		font-weight: 700
-		background: #f8f8f8
-		padding: 10px
-
-	.item-head
-		margin-top: 20px
-
-	.item-detail
-		margin-top: 20px
-
-	.item-detail dd
-		margin-top: 5px
-
-	.item-detail dd a
-		@include font-size(16)
-		color: #06AED5
-
-.page-detail
-.page-detail
-.page-detail
-.page-detail
-.page-detail
-.page-detail
-.page-detail
-.page-detail
